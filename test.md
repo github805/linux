@@ -7,7 +7,7 @@ curl -X POST \
   -d '{"tenant": "'$TENANT'"}' > rest-token.txt
 ```
 <!-- .element: class="lefty" -->Showing DIR size:
-...bash
+```bash
 # du -shc * | sort -h | head -5
 # du -shc lib/* | sort -rh | head -5
-...
+```
