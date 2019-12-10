@@ -1,7 +1,99 @@
 
-Show dir size:
-#du -shc * | sort -h | head -5
-#du -shc lib/* | sort -rh | head -5
+##### Show dir size
+# du -shc * | sort -h | head -5
+# du -shc lib/* | sort -rh | head -5
+
+
+##### Kafka commands 
+# kafka-topics --list --zookeeper localhost:2181
+
+##### Bestaande partitie vergroten
+- partitie verwijderen
+- partitie aanmaken + type zetten
+- pvresize
+- lvextend
+- xfs_growfs 
+Tussendoor rebooten
+
+# df -h
+# fdisk -l
+# fdisk /dev/sda
+  p
+  d (delete partion) 
+  2 (delete partion number 2)
+  n (add new partion)
+    p (Primary)
+    2 (partion number)
+	 Select default first sector
+	 Select default last sector
+  t (Change partion id/type)
+    2 (default)
+    83 (Linux LVM)
+  p (print partion table)
+  w (write changes)
+# reboot now
+# pvs
+# pvresize /dev/sda2
+# lvextend -l 100%FREE /dev/centos/root
+# 
+
+##### Managing LVM Logical Volumes
+
+3 steps:
+1 - pv => creating physical volume 
+2 - vg => creating volume group 
+3 - lv => creating logical volume
+
+1) fdisk /dev/sdb1
+	pvcreate /dev/sdb1
+	check pvs, pvdisplay, lsblk
+2) vgcreate (create volume group)
+   assign physical volume to vg
 
 
 
+196  df -h
+  197  fdisk -l
+  198  fdisk /dev/sda
+  199  reboot now
+  200  pvs
+  201  pvresize /dev/sda2
+  202  pvs
+  203  lvs
+  204  vgs
+  205  df -h
+  206  lvextend -l 100%FREE /dev/centos/root 
+  207  vgs
+  208  pv
+  209  pvs
+  210  lv
+  211  lvs
+  212  gvs
+  213  pvs
+  214  gvs
+  215  vgs
+  216  lvs
+  217  df -h
+  218  df -T
+  219  xfs_growfs /dev/centos/root 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   ip route get 172.25.17.203
+	
+	tcpdump -i eth0 -nnn host 172.25.17.203 or 172.25.17.204
