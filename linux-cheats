@@ -1,0 +1,7 @@
+
+Show dir size:
+#du -shc * | sort -h | head -5
+#du -shc lib/* | sort -rh | head -5
+
+
+
