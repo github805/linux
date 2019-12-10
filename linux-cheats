@@ -1,8 +1,9 @@
 
-##### Show dir size
+<!-- .element: class="lefty" -->Showing DIR size:
+...bash
 # du -shc * | sort -h | head -5
 # du -shc lib/* | sort -rh | head -5
-
+...
 
 ##### Kafka commands 
 # kafka-topics --list --zookeeper localhost:2181
