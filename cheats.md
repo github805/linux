@@ -14,4 +14,5 @@ ip route get 172.25.17.203
 ## TCP DUMP
 ```bash
 tcpdump -i eth0 -nnn host 172.25.17.203 or 172.25.17.204
+tcpdump -i eth1 -nnn -t -c 200 | cut -f 1,2,3,4 -d '.' | sort | uniq -c | sort -nr | head -n 20
 ```
