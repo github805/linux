@@ -7,7 +7,7 @@ du -shc * | sort -h | head -5
 du -shc lib/* | sort -rh | head -5
 ```
 ## IP ROUTE
-```bash
+```ruby
 ip route get 172.25.17.203
 ```
 
