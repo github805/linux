@@ -19,7 +19,7 @@ tcpdump -i eth1 -nnn -t -c 200 | cut -f 1,2,3,4 -d '.' | sort | uniq -c | sort -
 
 ## Kafka commands
 
-# Kafka topic list
+### Kafka topic list
 ```bash
 kafka-topics --list --zookeeper localhost:2181
 
