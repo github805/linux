@@ -1,0 +1,162 @@
+{
+    "@timestamp" => 2020-03-25T15:20:56.510Z,
+      "@version" => "1",
+          "tags" => [
+        [0] "forwarded",
+        [1] "beats_input_raw_event",
+        [2] "_grokparsefailure"
+    ],
+         "event" => {
+         "created" => "2020-03-25T16:55:31.196Z",
+            "code" => 256,
+            "kind" => "event",
+        "provider" => "VNG_DNSLogging"
+    },
+           "log" => {
+        "level" => "information"
+    },
+        "winlog" => {
+        "computer_name" => "secdc01.kpnsecurity.local",
+           "event_data" => {
+            "param1" => "QUERY_RECEIVED: TCP=0; InterfaceIP=10.146.20.1; Source=10.146.20.4; RD=1; QNAME=_ldap._tcp.secdc01.kpnsecurity.local.; QTYPE=33; XID=26388; Port=62400; Flags=256; PacketData=0x671401000001000000000000055F6C646170045F74637007736563646330310B6B706E7365637572697479056C6F63616C0000210001; AdditionalInfo = VirtualizationInstanceOptionValue: .; GUID={2DC219CC-418B-46ED-9F18-03AC85E5A81E};\n\nTime = 03/25/2020 16:20:29\nLevel = 4\nMachineName = secdc01.kpnsecurity.local\nProcessId = 2320\nThreadId = 3616\nUserId = S-1-5-18\nCount = 564"
+        },
+                  "api" => "wineventlog",
+             "event_id" => 256,
+              "channel" => "VNG_DNSLogging",
+                 "task" => "",
+        "provider_name" => "VNG_DNSLogging",
+            "record_id" => 3115
+    },
+          "host" => {
+                  "id" => "a517d99d-169e-4872-9c16-2ace5d92f5b5",
+                "name" => "secwec01",
+            "hostname" => "secwec01",
+        "architecture" => "x86_64",
+                  "os" => {
+               "build" => "14393.3542",
+            "platform" => "windows",
+                "name" => "Windows Server 2016 Standard",
+              "kernel" => "10.0.14393.3541 (rs1_release_inmarket.200218-2047)",
+             "version" => "10.0",
+              "family" => "windows"
+        }
+    },
+         "agent" => {
+                  "id" => "74ef3218-d53f-40cd-a178-d41ee6c0fd08",
+        "ephemeral_id" => "255aa5b0-42c0-46c8-a764-036d0a4ac1ac",
+            "hostname" => "secwec01",
+             "version" => "7.5.2",
+                "type" => "winlogbeat"
+    },
+           "ecs" => {
+        "version" => "1.1.0"
+    }
+}
+{
+    "@timestamp" => 2020-03-25T15:21:24.075Z,
+          "user" => {
+            "id" => "S-1-5-21-1669694698-1300213756-3614650355-1104",
+          "name" => "SECEX01$",
+        "domain" => "KPNSECURITY.LOCAL"
+    },
+         "event" => {
+         "created" => "2020-03-25T16:55:31.230Z",
+            "code" => 4624,
+            "type" => "authentication_success",
+        "category" => "authentication",
+        "provider" => "Microsoft-Windows-Security-Auditing",
+            "kind" => "event",
+         "outcome" => "success",
+          "action" => "logged-in",
+          "module" => "security"
+    },
+           "ecs" => {
+        "version" => "1.1.0"
+    },
+        "winlog" => {
+                "logon" => {
+              "id" => "0x14e3edc1",
+            "type" => "Network"
+        },
+                 "task" => "",
+            "record_id" => 319993,
+        "computer_name" => "secwec01.kpnsecurity.local",
+           "event_data" => {
+                  "TargetLinkedLogonId" => "0x0",
+                            "LogonType" => "3",
+                        "LmPackageName" => "-",
+                        "TargetUserSid" => "S-1-5-21-1669694698-1300213756-3614650355-1104",
+               "TargetOutboundUserName" => "-",
+             "TargetOutboundDomainName" => "-",
+                        "ElevatedToken" => "%%1843",
+            "AuthenticationPackageName" => "Kerberos",
+                            "IpAddress" => "-",
+                  "RestrictedAdminMode" => "-",
+                     "LogonProcessName" => "Kerberos",
+                               "IpPort" => "-",
+                  "TransmittedServices" => "-",
+                       "TargetUserName" => "SECEX01$",
+                     "TargetDomainName" => "KPNSECURITY.LOCAL",
+                   "ImpersonationLevel" => "%%1833",
+                            "LogonGuid" => "{8DE3921E-4ED4-0B3E-093C-3358903B5631}",
+                       "SubjectUserSid" => "S-1-0-0",
+                    "SubjectDomainName" => "-",
+                       "SubjectLogonId" => "0x0",
+                            "KeyLength" => "0",
+                       "VirtualAccount" => "%%1843",
+                        "TargetLogonId" => "0x14e3edc1",
+                      "SubjectUserName" => "-"
+        },
+          "activity_id" => "{BFFC7569-F30D-0000-B776-FCBF0DF3D501}",
+                  "api" => "wineventlog",
+        "provider_guid" => "{54849625-5478-4994-A5BA-3E3B0328C30D}",
+              "process" => {
+               "pid" => 576,
+            "thread" => {
+                "id" => 1488
+            }
+        },
+             "event_id" => 4624,
+              "channel" => "Security",
+        "provider_name" => "Microsoft-Windows-Security-Auditing",
+              "version" => 2
+    },
+      "@version" => "1",
+        "source" => {
+        "domain" => "-"
+    },
+          "tags" => [
+        [0] "forwarded",
+        [1] "beats_input_raw_event",
+        [2] "_grokparsefailure"
+    ],
+       "process" => {
+              "name" => "-",
+        "executable" => "-",
+               "pid" => 0
+    },
+           "log" => {
+        "level" => "information"
+    },
+         "agent" => {
+                  "id" => "74ef3218-d53f-40cd-a178-d41ee6c0fd08",
+        "ephemeral_id" => "255aa5b0-42c0-46c8-a764-036d0a4ac1ac",
+            "hostname" => "secwec01",
+             "version" => "7.5.2",
+                "type" => "winlogbeat"
+    },
+          "host" => {
+                  "id" => "a517d99d-169e-4872-9c16-2ace5d92f5b5",
+                "name" => "secwec01",
+            "hostname" => "secwec01",
+        "architecture" => "x86_64",
+                  "os" => {
+               "build" => "14393.3542",
+            "platform" => "windows",
+                "name" => "Windows Server 2016 Standard",
+              "kernel" => "10.0.14393.3541 (rs1_release_inmarket.200218-2047)",
+             "version" => "10.0",
+              "family" => "windows"
+        }
+    }
+}
