@@ -24,3 +24,9 @@ tcpdump -A -i eth1 -nnn port 514 | grep infoblox-responses
 ```bash
 kafka-topics --list --zookeeper localhost:2181
 ```
+
+<!-- .element: class="lefty" -->KSQL Qeuries for creating streams:
+```bash
+CREATE STREAM QYYY WITH (KAFKA_TOPIC='qyyy', value_format='JSON') AS SELECT STRUCT( QRADAR := REPLACE(EVENT->QRADAR, 'XXXPARSEFIELD', 'YYYPARSEFIELD')) AS EVENT FROM QXXX WHERE `eoi` = 'True' EMIT CHANGES;
+```
+
